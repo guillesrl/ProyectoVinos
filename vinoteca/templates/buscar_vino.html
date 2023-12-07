@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+    <p>
+    <h3>Busqueda</h3>
+    </p>
+    <h5>Ingrese el nombre del vino:</h5>
+    <form action="../buscar" method="GET">
+        <div class="row my-4 mx-4">
+            <div class="col">
+                <input type="text" name="vino" placeholder="Luis Cañas" class="form-control">
+            </div>
+            <div class="col">
+                <input type="submit" value="Buscar" class="btn btn-secondary">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

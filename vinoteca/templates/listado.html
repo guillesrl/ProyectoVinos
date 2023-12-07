@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <p><h4>Lista de Vinos</h4></p>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="datatable-vinos">
+                        <thead>                            
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Pais</th>
+                                <th>Cosecha</th>
+                                <th>Variedades</th>
+                                <th>Puntaje</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if vinos|length > 0 %}
+                                {% for vino in vinos %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ vino.nombre }}</td>
+                                <td>{{ vino.pais }}</td>
+                                <td>{{ vino.cosecha }}</td>
+                                <td>{{ vino.cepas }}</td>
+                                <td>{{ vino.puntos }}</td>
+                                <td>{{ vino.precio }}</td>
+                            </tr>
+                                {% endfor %}
+                            {% else %}
+                                <p>No hay vinos en la base de datos.</p>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

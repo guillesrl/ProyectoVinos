@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-5">
+<h4>Estas buscando: <span class="badge rounded-pill bg-danger py-2">{{query}}</span></h4>
+{% if botellas %}
+<div class="container"></div>
+<p>Articulos encontrados: </p>
+<ul>
+    {% for botella in botellas %}
+    <li>
+        {{botella.nombre}} {{botella.pais}} {{botella.puntos}}pts <a class="btn " href="../ver_vino/"{{botella.id}}>Ver</a>
+    </li>
+    {% endfor %}
+</ul>
+<p>{{botellas|length}} Resultados</p>
+{% else %}
+    <p>No hay coincidencias</p>
+{% endif%}
+
+<a class="btn btn-secondary" href="../buscar_vino">Volver</a>
+</div>
+</div>
+
+{% endblock %}

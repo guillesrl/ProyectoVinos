@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container px-4 my-4">
+    <p><h5 class="text-start"> 
+        Registrate para recibir el listado actualizado
+    </h5></p>
+<div class="row my-5"> 
+    <div class="col-md-6">
+    <form> 
+        <div class="row"> 
+            <label for="fname" class="col-sm-2  
+            col-form-label">Nombre</label> 
+            <div class="col-sm"> 
+                <input type="text" class="form-control" 
+                    id="fname" placeholder="Juan"> 
+            </div> 
+        </div> 
+
+        <div class="row mt-4"> 
+            <label for="lname" class="col-sm-2  
+            col-form-label">Apellido</label> 
+            <div class="col-sm"> 
+                <input type="text" class="form-control" 
+                    id="lname" placeholder="Perez"> 
+            </div> 
+        </div> 
+
+        <div class="row mt-4"> 
+            <label for="email" class="col-sm-2  
+            col-form-label">Email</label> 
+            <div class="col-sm"> 
+                <input type="email" class="form-control" 
+                    id="email" placeholder="juan@perez.com"> 
+            </div> 
+        </div> 
+
+        <div class="row mt-4 mb-4"> 
+            <label for="mobile" class="col-sm-2  
+            col-form-label">Telefono</label> 
+            <div class="col-sm"> 
+                <input type="tel" class="form-control" 
+                    id="mobile" placeholder="Opcional"> 
+            </div> 
+        </div> 
+        <!--
+        <fieldset class="row"> 
+            <legend class="col-form-label col-sm-2 pt-0">Gender</legend> 
+            <div class="col-sm"> 
+                <div class="form-check"> 
+                    <input class="form-check-input" type="radio" 
+                        name="gender" id="male" value="option1"
+                        checked> 
+                    <label class="form-check-label" for="male"> 
+                        Male 
+                    </label> 
+                </div> 
+                <div class="form-check"> 
+                    <input class="form-check-input" type="radio" 
+                        name="gender" id="female" value="option2"> 
+                    <label class="form-check-label" for="female"> 
+                        Female 
+                    </label> 
+                </div> 
+                <div class="form-check"> 
+                    <input class="form-check-input" type="radio" 
+                        name="gender" id="others" value="option3"> 
+                    <label class="form-check-label" for="others"> 
+                        Others 
+                    </label> 
+                </div> 
+            </div> 
+        </fieldset> -->
+
+        <button type="submit" class="btn btn-secondary">Registrarme</button> 
+    </form> 
+    </div> 
+    <div class="col-md-6">
+        <img src="../static/img/botellas.jpg" width="100%">
+    </div>   
+</div>
+</div>
+{% endblock %}
