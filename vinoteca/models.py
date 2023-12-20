@@ -1,4 +1,10 @@
 from django.db import models
+from django import forms
+
+class Contacto(forms.Form):
+    nombre = forms.CharField(max_length=50)
+    email = forms.EmailField()
+    mensaje = forms.CharField(widget=forms.Textarea)
 
 class Vino(models.Model):
     cosecha = models.SmallIntegerField()

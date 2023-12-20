@@ -4,7 +4,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Vino
 import pandas as pd
-# Create your views here.
+
+def contacto(request):
+    form = Contacto()
+    return render(request, "formulario.html", {'form': form})
 
 def index(request):
     return render(request, "index.html")
