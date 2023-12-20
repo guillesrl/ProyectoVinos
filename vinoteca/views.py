@@ -2,7 +2,7 @@ from django.shortcuts import render
 import json
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Vino
+from .models import Vino, Contacto
 import pandas as pd
 
 def contacto(request):
