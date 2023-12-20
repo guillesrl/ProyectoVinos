@@ -12,8 +12,8 @@ def contacto(request):
 def index(request):
     return render(request, "index.html")
 
-def contacto(request):
-    return render(request, "contacto.html")
+def registro(request):
+    return render(request, "registro.html")
 
 def lista_vinos(request):
     #vinos = list(Vino.objects.values())
