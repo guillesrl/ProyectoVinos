@@ -16,7 +16,6 @@ def registro(request):
     return render(request, "registro.html")
 
 def lista_vinos(request):
-    #vinos = list(Vino.objects.values())
     vinos = Vino.objects.all()
     return render(request, "listado.html", {"vinos": vinos})
 
@@ -43,7 +42,6 @@ def guardarExcel(request):
         vinoDB.save()
 
     return render(request, "guardarExcel.html", {"vinos": vinos})
-
 
 def buscar(request):
     if request.GET["vino"]:
